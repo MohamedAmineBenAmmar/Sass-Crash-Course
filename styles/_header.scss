@@ -1,0 +1,36 @@
+// 6-Mixins (functions of sass)
+@mixin flexCenter($direction, $background) {
+    // 6.1-Creating the mixin
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: $direction;
+    background: $background;
+}
+
+// Note: Sass automatically add the css code so that all browsers can read it (after compiling to regular css)
+header {
+    // 6.2-Calling the mixin
+    @include flexCenter(column, red);
+    color: $textColor;
+
+    // 2-Nesting (targeting the button inside the header)
+    button {
+        background: $primaryBtn;
+        // 3-Adding animations like hover
+        &:hover {
+            background: red;
+        }
+        // 4- Working with the after and before
+        &::after {
+            content: 'YOOOOOOO !';
+        }
+
+    }
+
+    // Adding multiple nested elements
+    p {
+        font-size: 1.5rem;
+    }
+}

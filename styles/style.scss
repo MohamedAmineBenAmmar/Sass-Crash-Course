@@ -1,0 +1,20 @@
+// 5- Importing a file
+@import './vars';
+@import './header';
+@import './anotherOne';
+
+
+// Note: example of the old school css way (targeting the button inside the header)
+// header button {
+//     background: $primaryBtn;
+// }
+
+// .contact button {
+//     background: $primaryBtn;
+// }
+
+// 6.3-Calling the mixin from another file
+.contact {
+    @include flexCenter(row, blue);
+}
+

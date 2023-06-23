@@ -1,0 +1,7 @@
+// 7-Extending Selectors
+.another-one {
+    @extend header;
+    background: coral;
+    // 8-Calculations
+    width: 100% - 10% ;
+}
